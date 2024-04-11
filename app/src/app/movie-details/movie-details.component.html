@@ -1,0 +1,48 @@
+<div class="row justify-content-center" *ngIf="movie">
+    <div class="col-12 at 5">
+        <mat-card>
+
+            <!--TITLE-->
+            <div class="row m-5 title">
+                <div class="col">
+                    <span class="name">{{movie.title}}</span>
+                    <span class="year">({{movie.year}})</span>
+                </div>
+            </div>
+
+            <!--BODY-->
+            <div class="row m-5 content">
+
+                <!--COVER-->
+                <div class="col-4 cover">
+                    <img class="img-fluid" [src]="movie.cover">
+                </div>
+
+                <!--CONTENT-->
+                <div class="col-4 cover">
+                    <div class="row">
+                        
+                        <!--DESCRIPTION-->
+                        <div class="col-12 description">
+                            "{{movie.description}}"
+                            <p></p>
+                            <a href="{{movie.midia}}">Link para o filme</a>
+                            <p></p>
+                            
+                            <!-- CHECKBOX FOR FAVORITE -->
+                            <mat-checkbox class="favorite-checkbox" [(ngModel)]="movie.isFavorite" (change)="toggleFavorite()">
+                                Marcar como favorito
+                            </mat-checkbox>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </mat-card>
+    </div>
+</div>
+
+

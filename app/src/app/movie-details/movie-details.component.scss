@@ -1,0 +1,31 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.title {
+    font-size: 40px;
+
+    .name {
+        font-weight: bold;
+    }
+    .year {
+        font-weight: lighter;
+    }
+}
+
+.content {
+    .description {
+        font-style: italic;
+        font-size: 20px;
+    }
+}
+
+/* Adicione estas linhas ao seu arquivo movie-details.component.scss */
+
+.favorite-checkbox {
+    display: inline-block;
+    margin-top: 10px; /* Ajuste conforme necessário */
+}
+
+
+
+
+

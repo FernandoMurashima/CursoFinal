@@ -1,4 +1,5 @@
-app/
+app/node_modules
+#app/src
 # Django #
 *.log
 *.pot

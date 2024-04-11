@@ -1,0 +1,52 @@
+<div class="row justify-content-center">
+  <div class="col-12 mt-5">
+    <mat-card>
+
+      <!-- TITLE -->
+      <div class="row m-5">
+        <mat-card-title>Filmes disponiveis</mat-card-title>
+      </div>
+
+      <!-- TOOLBAR -->
+      <div class="row toolbar">
+        <div class="col-8">
+
+          <!-- SEARCH -->
+          <mat-form-field class="search-field">
+            <mat-label>Search</mat-label>
+            <input matInput type="text" [(ngModel)] = "searchPattern" (keydown)="onSearchChange()">
+            <button *ngIf="searchPattern" matSuffix mat-icon-button aria-label="Clear" (click)="clearSearch"()>
+              <mat-icon>close</mat-icon>
+            </button>
+          </mat-form-field>
+        
+        </div>
+      </div>
+
+      <!-- MOVIE LIST-->
+      <div class="row m-5">
+        <a div class="col-4 movie-frame" 
+              *ngFor="let movie of movies"
+             
+              [routerLink]="['/movie-details', movie?.id]">
+             
+            <div class="row movie justify-content-center">
+              <div class="col-11 cover">
+                <img [src]="movie.cover" class="img-fluid" />
+              </div>
+            <div class="col-12 name">
+              <span class="title">
+                {{movie.title}}
+              </span>
+
+              <span class="year">
+                {{movie.year}}
+              </span>
+
+            </div>
+          </div>
+        </a>
+      </div>
+    </mat-card>
+  </div>
+</div>
