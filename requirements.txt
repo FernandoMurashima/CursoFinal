@@ -1,0 +1,4 @@
+django==5.0.3
+djangorestframework==3.14.0
+markdown==3.5.2
+django-filter==24.1
